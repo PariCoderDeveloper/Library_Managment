@@ -1,4 +1,4 @@
-from Domain.base import Base
+from Src.Infrastructure.base import Base
 from sqlalchemy import Table
 from sqlalchemy import Column, Integer, ForeignKey
 
