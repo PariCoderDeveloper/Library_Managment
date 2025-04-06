@@ -1,130 +1,56 @@
 # Library Management System
 
-## Description
-
-The **Library Management System (LMS)** is a desktop application built using **Tkinter** for **Windows**. It allows users to manage and track books, authors, and user profiles through a user-friendly graphical interface. The application provides the necessary functionality to add, update, and delete books, authors, and user data, ensuring easy management of library information. The system uses **SQLAlchemy** for database interactions and follows the **Repository Design Pattern** to ensure clean and maintainable data access logic.
-
-The system supports basic CRUD operations (Create, Read, Update, Delete) for managing books, authors, user profiles, and the relationships between them. With **SQLite** as the backend database, it is efficient for local storage and retrieval of library data.
+This is a Library Management System developed using Python, SQLAlchemy, Alembic for database migrations, and interfaces for service and repository layers.
 
 ## Features
 
-- **Books Management**: Add, update, and delete books with fields like title, genre, and year.
-- **Authors Management**: Add, update, and delete authors and link them to books.
-- **User Profiles**: Create and manage user profiles with personal information, including a biography.
-- **Book-Author Relationship**: Easily link books and authors together.
-- **Book-User Relationship**: Associate books with users in the system.
-- **Database Integration**: Uses **SQLite** for storing data, which is lightweight and fast for local applications.
-- **Repository Pattern**: Ensures organized and structured access to data with the Repository Design Pattern.
-- **Graphical User Interface (GUI)**: Built using **Tkinter** for a seamless desktop user experience.
+- User Authentication
+- User Profile Management
+- Book Management
+- Author Management
+- Search & Filter Books by Genre, Year, and Author
+- Track User's Borrowed Books
 
-## Technologies Used
+## Tech Stack
 
-- **Python 3.x**: The primary programming language.
-- **Tkinter**: A standard Python library for building GUI-based applications.
-- **SQLAlchemy**: An ORM (Object-Relational Mapping) tool for Python that simplifies database interaction.
-- **SQLite**: A lightweight database engine for managing and storing data locally.
-- **Alembic**: A database migration tool for managing schema changes.
-- **Repository Design Pattern**: To keep data access logic clean and maintainable.
+- **Python**: Main programming language
+- **Flask**: Web framework (if applicable)
+- **SQLAlchemy**: ORM for database operations
+- **Alembic**: For database migrations
+- **SQLite**: Database for development (or any other DB you use)
 
-## Installation
+## Setup
 
-### Prerequisites
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/LibraryManagement.git
+   cd LibraryManagement
+   ```
 
-Make sure you have **Python 3.x** installed. You can download Python from [here](https://www.python.org/downloads/).
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Clone the Repository
+3. **Database Setup**:
+   Run Alembic migrations to set up the database schema:
+   ```bash
+   alembic upgrade head
+   ```
 
-Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/your-username/library-management-system.git
-cd library-management-system
-```
-
-### Create a Virtual Environment
-
-It's a good practice to use a virtual environment for managing dependencies:
-
-```bash
-python -m venv venv
-```
-
-Activate the virtual environment:
-
-- On Windows:
-    ```bash
-    .\venv\Scripts\activate
-    ```
-- On macOS/Linux:
-    ```bash
-    source venv/bin/activate
-    ```
-
-### Install Dependencies
-
-Install the necessary dependencies via `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Setup the Database
-
-To initialize the SQLite database and create the necessary tables, run the following command:
-
-```bash
-python your_application.py
-```
-
-This will set up the database with the required tables (books, authors, users, profiles).
-
-### Running the Application
-
-After setting up everything, you can start the application by running the following command:
-
-```bash
-python main.py
-```
-
-This will launch the Tkinter GUI, where you can interact with the Library Management System.
-
-## Database Schema
-
-- **Books**: Store book-related information like title, genre, and year.
-- **Authors**: Store author information, and associate books with authors.
-- **Users**: Store user information, including usernames.
-- **Profiles**: Each user can have a profile containing additional information like a biography.
-- **Book-Author**: Many-to-many relationship between books and authors.
-- **Book-User**: Many-to-many relationship between books and users (borrowed books, etc.).
-
-## Structure of the Application
-
-The application is structured into different modules to maintain separation of concerns:
-
-- **Domain**: Contains model definitions for books, authors, users, and profiles.
-- **Migrations**: Contains Alembic migration scripts for handling database schema changes.
-- **Repository**: Implements the repository pattern for clean data access.
-- **GUI**: Contains all Tkinter UI components and related logic for displaying and interacting with the data.
-
-## Example Use Case
-
-1. **Managing Books**: 
-   - You can add a new book by providing its title, genre, and publication year.
-   - You can update or delete a book from the system as needed.
-
-2. **Managing Authors**:
-   - Authors can be added to the system and linked to books, creating relationships between books and authors.
-
-3. **Managing Users**:
-   - Users can be added to the system with a unique username and a profile that contains additional information such as a biography.
-   - Books can be associated with users, making it easy to track who has borrowed which books.
-
-4. **Viewing Data**:
-   - The GUI allows users to easily view books, authors, and user profiles.
+4. **Run the Application**:
+   To run the app (if applicable), use:
+   ```bash
+   python app.py
+   ```
 
 ## Contributing
 
-If you'd like to contribute to the project, please fork the repository and submit a pull request with your changes. Contributions are welcome for bug fixes, enhancements, and feature requests.
+1. Fork the repository.
+2. Create your branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
 ## License
 
