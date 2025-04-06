@@ -5,7 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from Src.Infrastructure.base import Base
+from Infrastructure.base import Base
 from Domain.Models import  Book_Author, User_Profile, Book_User
 
 # this is the Alembic Config object, which provides
