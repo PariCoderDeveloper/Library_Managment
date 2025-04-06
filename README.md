@@ -1,57 +1,57 @@
-# Library Management System
+# 📚 Library Management System
 
-This is a Library Management System developed using Python, SQLAlchemy, Alembic for database migrations, and interfaces for service and repository layers.
+A simple yet functional desktop application for managing a library's collection of books, authors, and users. Built using **Python (Tkinter)** for the GUI and **SQLAlchemy** with **SQLite** for data persistence.
 
-## Features
+## ✨ Features
 
-- User Authentication
-- User Profile Management
-- Book Management
-- Author Management
-- Search & Filter Books by Genre, Year, and Author
-- Track User's Borrowed Books
+- 📖 Add, edit, and delete books
+- 👤 Manage authors and user profiles
+- 🔍 Search and filter book collection
+- 💾 Persistent storage using SQLite
+- 🖥️ User-friendly GUI built with Tkinter
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Python**: Main programming language
-- **Flask**: Web framework (if applicable)
-- **SQLAlchemy**: ORM for database operations
-- **Alembic**: For database migrations
-- **SQLite**: Database for development (or any other DB you use)
+- **Language:** Python 3.x
+- **GUI:** Tkinter
+- **Database:** SQLite (via SQLAlchemy ORM)
+- **Architecture:** Modular, OOP-based structure
 
-## Setup
+## 🚀 How to Run
 
-1. **Clone the Repository**:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/LibraryManagement.git
-   cd LibraryManagement
+   git clone https://github.com/ParisaAlizadeh2003/Library_Managment.git
+   cd Library_Managment
    ```
 
-2. **Install Dependencies**:
+2. Install dependencies (if any):
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Database Setup**:
-   Run Alembic migrations to set up the database schema:
+3. Run the application:
    ```bash
-   alembic upgrade head
+   python main.py
    ```
 
-4. **Run the Application**:
-   To run the app (if applicable), use:
-   ```bash
-   python app.py
-   ```
+> ⚠️ Make sure Python 3 is installed on your machine.
 
-## Contributing
+## 🖼️ Screenshots
 
-1. Fork the repository.
-2. Create your branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
+![Main Window](screenshots/main_window.png)
+*Main application interface*
 
-## License
+## 🧠 Future Improvements
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [ ] Add login/authentication system
+- [ ] Export/Import book list to/from CSV
+- [ ] Improve UI with custom themes (e.g., ttkbootstrap)
+
+## 🤝 Contributions
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
