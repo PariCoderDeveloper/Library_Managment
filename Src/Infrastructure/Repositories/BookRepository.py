@@ -3,9 +3,16 @@ from Domain.Models.Book_Author import Book
 from Domain.Interfaces.IBookRepository import IBookRepository
 
 class BookRepository(IBookRepository):   
-    def get_all_books(self):
+    def get_all_books(self, genre= None, year=None, author_name=None):
         with Session() as session:
-            return session.query(Book).all()
+            query = session.query(Book)
+            if genre:
+                query.filter(Book.genre == genre)
+            if year:
+                query.filter(Book.year == year)
+            if author_name:
+                query.filter(Book.authors.has(author_name))
+            return query.all()
     
     def get_book_by_id(self, book_id:int):
         with Session() as session:
@@ -27,15 +34,3 @@ class BookRepository(IBookRepository):
            if book:
                book.deleted = True
                session.commit()
-    
-    def filter_book(self, genre= None, year=None, author_name=None):
-        with Session() as session:
-            query = session.query(Book)
-            if genre:
-                query = query.filter(Book.genre == genre)
-            if year:
-                query = query.filter(Book.year == year)
-            if author_name:
-                query = query.filter(Book.authors.has(author_name))
-            return query.all()
-            

@@ -4,7 +4,7 @@ from Domain.Models.Book_Author import Book
 
 class IBookRepository(ABC):
     @abstractmethod
-    def get_all_books(self) -> List[Book]:
+    def get_all_books(self, genre: Optional[str], year: Optional[int], author_name: Optional[str]) -> List[Book]:
         """Retrieve all books."""
         pass
     
@@ -26,9 +26,4 @@ class IBookRepository(ABC):
     @abstractmethod
     def delete_book(self, book_id:int) -> None:
         """Delete a book."""
-        pass
-    
-    @abstractmethod
-    def filter_book(self, genre: Optional[str], year: Optional[int], author_name: Optional[str]) -> List[Book]:
-        """Filter books based on genre, year, and author."""
         pass
