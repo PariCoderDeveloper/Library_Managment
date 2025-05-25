@@ -29,6 +29,6 @@ class IUserRepository(ABC):
         pass
     
     @abstractmethod
-    def authenticate_user(self, username: str, password: str) -> Optional[User]:
+    def authenticate_user(self, username: str, password: str) -> bool:
         """Authenticate a user by username and password."""
         pass

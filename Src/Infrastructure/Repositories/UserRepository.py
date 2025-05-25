@@ -29,4 +29,9 @@ class UserRepository(IUserRepository):
                 session.commit()
     
     def authenticate_user(self, username, password):
-        return super().authenticate_user(username, password)
+        with Session() as session:
+            user =  session.query(User).filter(User.username == username).first()
+            if user:
+                return True
+            else:
+                return False
