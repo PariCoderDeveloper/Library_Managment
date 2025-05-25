@@ -184,7 +184,7 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 **Pari Coder**
 
 * GitHub: [@PariCoderDeveloper](https://github.com/PariCoderDeveloper)
-* Email: [your-email@example.com](mailto:parisaalizadeh13821382@gmail.com)
+* Email: [parisaalizadeh13821382@gmail.com](mailto:parisaalizadeh13821382@gmail.com)
 
 Feel free to open an issue if you run into any problems or have suggestions!
 
